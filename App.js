@@ -1,21 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Button } from 'react-native'
 
-export default function App() {
+//layout
+import Header from "./component/Header";
+//screens
+import Home from "./screens/Home";
+import Category from "./screens/Category";
+import CategoryDetails from "./screens/CategoryDetails";
+
+const Stack = createStackNavigator();
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#056B14",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerLeft: () => (<Header />)
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Bach Hoa Xanh" }}
+        />
+        <Stack.Screen name="Category" component={Category} />
+        <Stack.Screen name="Details" component={CategoryDetails} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

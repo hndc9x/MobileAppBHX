@@ -1,17 +1,18 @@
-import React from "react";
-import { Image, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import * as React from "react";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import MenuImg from "../assets/img/header/menu.png";
 
-function Header() {
+function Header({ navigation }) {
   return (
-    <TouchableOpacity
-      activeOpacity={0.4}
-      onPress={() => {
-        Alert.alert("Hiển thị menu");
-      }}
-    >
-      <Image source={MenuImg} style={styles.Menu} />
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity
+        activeOpacity={0.4}
+        onPress={() => navigation.navigate("SliderBar")}
+      >
+        {/* <Search /> */}
+        <Image source={MenuImg} style={styles.Menu} />
+      </TouchableOpacity>
+    </View>
   );
 }
 

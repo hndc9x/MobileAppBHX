@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "name" : "Hộp  10 trứng gà tươi sạch QLEGgg",
+        "price" : 31000,
+        "type" : "Thịt heo xay",
+        "brand" : "G",
+        "mass" : "300g",
+        "production" : "Việt Nam",
+        "guide" : "Nấu chín trước khi dùng",
+        "Preservation" : "Bảo quản ở nhiệt độ từ 0-4 độ C trong 3 ngày kế từ ngày sản xuất",
+        "description" : "Thịt heo xay G là loại thịt rất quen thuộc với mỗi bà nội trợ nhờ độ linh hoạt cao trong chế biến, lại nhanh thấm gia vị và có khả năng kết hợp hài hòa với hầu hết các loại rau củ, cho các đầu bếp tại gia thỏa sức biến tấu. Sản phẩm được kết hợp từ 80% nạc và 20% mỡ tươi sạch tạo sự hài hòa cho hương vị và sự an tâm tuyệt đối về chất lượng cho các món ăn.",
+        "hsd" : "Còn 3 tháng",
+        "image" : [
+            "../assets/img/category/rauxanh.jpg",
+            "../assets/img/header/house.png",
+            "../assets/img/header/menu.png"
+        ]
+    }
+]

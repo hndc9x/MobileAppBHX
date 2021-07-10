@@ -13,7 +13,7 @@ import styles from "../StyleSheet/Home";
  * @author
  * @function Home
  **/
-const Home = (props) => {
+function Home({ navigation }) {
   const { container, title, view, cloded } = styles;
   const renderRecipes = ({ item }) => {
     return (
@@ -34,7 +34,7 @@ const Home = (props) => {
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}
-          //numColumns={1}
+          numColumns={2}
           data={products}
           renderItem={(item) => renderRecipes(item)}
           keyExtractor={(item) => `${item.id}`}
@@ -42,5 +42,5 @@ const Home = (props) => {
       </View>
     </SafeAreaView>
   );
-};
+}
 export default Home;
